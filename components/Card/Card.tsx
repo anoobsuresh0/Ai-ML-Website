@@ -1,17 +1,20 @@
 import React from "react";
 
-const Card = () => {
+interface CardProps {
+  id: number;
+  title: string;
+  content: string;
+}
+
+const Card: React.FC<CardProps> = ({ id, title, content }) => {
   return (
     <>
-      <div className=" w-[300px] h-[300px] bg-[#5A5A5A] rounded-2xl my-4 p-4  ">
-        <h2 className=" font-sulphurPoint text-[36px] ">01․ </h2>
+      <div className="w-[300px] h-[auto] bg-gradient-to-r from-[#01B582] to-[#00A3C4] rounded-2xl my-10 p-4">
+        <h2 className="font-sulphurPoint text-[36px]">{id}</h2>
 
-        <h3 className=" font-sulphurPoint mb-4 ">EXECUTIVE BRIEFING</h3>
+        <h3 className="font-sulphurPoint mb-4">{title}</h3>
 
-        <h4 className=" font-neueMachina">
-          Lorem ipsum dolor sit amet consec tetur lorem ipsum. Dolor sit amet
-          consectetur. Lorem ipsum dolor sit amet consectetur.
-        </h4>
+        <h4 className="font-neueMachina">{content}</h4>
       </div>
     </>
   );
