@@ -13,7 +13,7 @@ export default function RootLayout({children,}: Readonly<{
 }>) {
   return (
     <html lang="en">
-      <body className={`${NeueMachina.variable} ${PowerGrotesk.variable} ${SulphurPoint.variable} `}>{children}</body>
+      <body className={`${NeueMachina.variable} ${PowerGrotesk.variable} ${SulphurPoint.variable} `} style={{ padding: '0 96px' }}>{children}</body>
     </html>
   );
 }
