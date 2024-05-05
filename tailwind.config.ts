@@ -8,6 +8,19 @@ const config: Config = {
     "./containers/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+
+    colors:{
+      lightGreen: "#01B582",
+      darkGreen: "#01523B",
+      darkGray: "#101010",
+      lightGray : "#5A5A5A",
+      white: "#FFFFFF",
+      black : "#000000",
+    },
+
+
+
+
     fontFamily: {
       neueMachina: ["var(--font-neue-machina)"],
       powerGrotesk: ["var(--font-power-grotesk)"],

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import BrainImage from "../../../assets/images/image_brain.png";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import CardGroup from "@/components/Card/CardGroup";
+import { ModelViewer } from "@/components/Model/ModelViewer";
 
 const HeroSection = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -43,7 +44,7 @@ const HeroSection = () => {
   );
 
   return (
-    <div className="flex h-auto mt-[200px] items-center">
+    <div className="flex h-auto mt-[200px] mb-[200px] items-center">
       <div className="flex-cols">
         <div className="flex items-center gap-10">
           <div className="w-[60%]">
@@ -64,7 +65,8 @@ const HeroSection = () => {
           </div>
 
           <div className="w-[40%]">
-            <img src={BrainImage.src} alt="" />
+            {/* <ModelViewer/> */}
+            <img src={BrainImage.src} alt="Brain Image" />
           </div>
         </div>
 
