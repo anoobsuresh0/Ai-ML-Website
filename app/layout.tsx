@@ -16,9 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`  ${NeueMachina.variable} ${PowerGrotesk.variable} ${SulphurPoint.variable} `}
-        style={{
-          padding: "0 96px",
-          
+        style={{          
           
         }}
       >

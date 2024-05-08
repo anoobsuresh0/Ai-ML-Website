@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Your custom global styles */
 
 body {
   background-color: black;
@@ -15,7 +16,8 @@ h1 {
 h2 {
   font-size: 2rem;
 }
- h3 {
+
+h3 {
   font-size: 1.5rem;
 }
 
@@ -23,3 +25,27 @@ p {
   font-size: 1rem;
 }
 
+@keyframes falling {
+  from {
+    transform: translateY(-900%);
+  }
+  to {
+    transform: translateY(400);
+  }
+}
+
+.animation-falling {
+  animation: falling 1s ease forwards;
+}
+
+/* Global hover effect for li elements */
+li {
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  font-size: 55px; /* Change the font size as desired */
+  text-decoration: underline;
+  text-decoration-color: green;
+  text-underline-offset: 3px; /* Adjust underline thickness */
+}
