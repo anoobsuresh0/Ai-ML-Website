@@ -47,10 +47,10 @@ const ServiceSection = () => {
 
         {/* List */}
         <ul className="font-neueMachina text-[50px] list-disc ml-4">
-          <li>MACHINE LEARNING</li>
-          <li>DETECTION & TAGGING</li>
-          <li>COMPUTER VISION</li>
-          <li>AI VISION MODELLING</li>
+          <li className="service_li" >MACHINE LEARNING</li>
+          <li className="service_li">DETECTION & TAGGING</li>
+          <li className="service_li">COMPUTER VISION</li>
+          <li className="service_li">AI VISION MODELLING</li>
         </ul>
       </div>
     </div>
