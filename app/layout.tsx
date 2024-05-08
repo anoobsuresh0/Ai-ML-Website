@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { NeueMachina, PowerGrotesk, SulphurPoint } from "@/utils/customFonts";
 import "./globals.css";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "AI/ML Project",
@@ -16,12 +17,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`  ${NeueMachina.variable} ${PowerGrotesk.variable} ${SulphurPoint.variable} `}
-        style={{          
-          
-        }}
+        style={{}}
       >
         {children}
       </body>
+      <footer>
+        <Footer />
+      </footer>
     </html>
   );
 }

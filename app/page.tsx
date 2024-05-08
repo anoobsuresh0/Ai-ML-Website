@@ -1,4 +1,5 @@
 import BenefitsSection from "@/containers/home-page/benefits-section";
+import ContactSection from "@/containers/home-page/contactus-section";
 import HeroSection from "@/containers/home-page/hero-section";
 import ServiceSection from "@/containers/home-page/service-section/";
 
@@ -22,10 +23,12 @@ export default function Home() {
       <div style={defaultStyle}>
         <BenefitsSection />
       </div>
-      <div style={sectionStyle} >
+      <div style={sectionStyle}>
         <ServiceSection />
       </div>
-     
+      <div style={defaultStyle}>
+        <ContactSection />
+      </div>
     </>
   );
 }
