@@ -14,10 +14,12 @@ const Page = async ({ params }) => {
   const { content } = await getPageContent(params.slug);
 
   return (
-    <section className="py-24">
-      <div className="container py-4 prose">{content}</div>
+    <section className="py-24 ">
+      {/* <div className="container py-4 prose ">{content}</div> */}
+      <div className="container py-4  ">{content}</div>
     </section>
   );
 };
 
 export default Page;
+
