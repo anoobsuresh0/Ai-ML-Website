@@ -20,10 +20,8 @@ export default function RootLayout({
         style={{}}
       >
         {children}
+        {/* <Footer />   */}
       </body>
-      <footer>
-        <Footer />
-      </footer>
     </html>
   );
 }
