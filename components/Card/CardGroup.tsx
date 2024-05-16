@@ -4,7 +4,7 @@ import Card from "./Card";
 interface BlogPost {
   id: number;
   title: string;
-  content: string;
+  description: string;
 }
 
 interface CardGroupProps {
@@ -15,7 +15,7 @@ const CardGroup: React.FC<CardGroupProps> = ({ blogPosts }) => {
   return (
     <div className="flex gap-10">
       {blogPosts.map((post) => (
-        <Card id={post.id} title={post.title} content={post.content} />
+        <Card id={post.id} title={post.title} description={post.description} />
       ))}
     </div>
   );

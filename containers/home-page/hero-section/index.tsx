@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BrainImage from "../../../assets/images/image_brain.png";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import CardGroup from "@/components/Card/CardGroup";
@@ -7,39 +7,21 @@ import { ModelViewer } from "@/components/Model/ModelViewer";
 
 const HeroSection = () => {
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [posts, setPosts] = useState<any[]>([]);
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
   };
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "The Future of AI in Healthcare",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, nunc vitae aliquam tincidunt, nisl nunc tincidunt nunc, id aliquam nunc nunc id nunc.",
-      date: "2022-10-01",
-      author: "John Doe",
-    },
-    {
-      id: 2,
-      title: "Advancements in Natural Language Processing",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, nunc vitae aliquam tincidunt, nisl nunc tincidunt nunc, id aliquam nunc nunc id nunc.",
-      date: "2022-09-15",
-      author: "Jane Smith",
-    },
-    {
-      id: 3,
-      title: "The Impact of AI on Business Operations",
-      content:
-        ". Nullam aliquet, nunc vitae aliquam tincidunt, nisl nunc tincidunt nunc, id aliquam nunc nunc id nunc.",
-      date: "2022-08-20",
-      author: "Alex Johnson",
-    },
-  ];
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const res = await fetch("/api");
+      const data = await res.json();
+      setPosts(data);
+    };
+    fetchPosts();
+  }, []);
 
-  const filteredBlogPosts = blogPosts.filter((post) =>
+  const filteredPosts = posts.filter((post) =>
     post.title.toLowerCase().includes(searchQuery)
   );
 
@@ -70,7 +52,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {searchQuery && <CardGroup blogPosts={filteredBlogPosts} />}
+        {searchQuery && <CardGroup blogPosts={filteredPosts} />}
       </div>
     </div>
   );
