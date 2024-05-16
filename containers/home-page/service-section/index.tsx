@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
-import Draggable from "react-draggable";
+// import Draggable from "react-draggable";
 
 
 
@@ -8,12 +8,10 @@ const ServiceSection = () => {
   const [animationCompleted, setAnimationCompleted] = useState(false);
 
   useEffect(() => {
-    // Set a timeout to mark the animation as completed after a certain delay
     const timeoutId = setTimeout(() => {
       setAnimationCompleted(true);
-    }, 500); // Adjust the delay as needed
+    }, 500); 
 
-    // Clean up the timeout on component unmount or animation completion
     return () => clearTimeout(timeoutId);
   }, []);
 

@@ -15,7 +15,7 @@ const CardGroup: React.FC<CardGroupProps> = ({ blogPosts }) => {
   return (
     <div className="flex gap-10">
       {blogPosts.map((post) => (
-        <Card id={post.id} title={post.title} description={post.description} />
+        <Card key={post.id} id={post.id} title={post.title} description={post.description} />
       ))}
     </div>
   );
