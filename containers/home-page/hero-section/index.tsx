@@ -26,7 +26,7 @@ const HeroSection = () => {
   );
 
   return (
-    <div className="flex h-auto mt-[200px] mb-[200px] items-center">
+    <div className="flex h-auto mt-[130px] mb-[200px] items-center">
       <div className="flex-cols">
         <div className="flex items-center gap-10">
           <div className="w-[60%]">
