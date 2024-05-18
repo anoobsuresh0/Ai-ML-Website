@@ -22,7 +22,7 @@ const Page = async ({ params }) => {
         <h4>Back</h4>
       </Link>
 
-      <div className="container px-[300px] justify-center py-4 prose max-w-none ">
+      <div className="container px-[300px] text-white justify-center py-4 prose max-w-none ">
         {content}
       </div>
     </section>

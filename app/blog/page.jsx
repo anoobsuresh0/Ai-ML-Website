@@ -1,29 +1,34 @@
+import BlogCard from "@/components/Card/BlogCard";
 import { getAllPostsMeta } from "@/lib/mdx";
 import Link from "next/link";
 
 const Page = async () => {
   const posts = await getAllPostsMeta();
 
+  const sortedPosts = posts
+    ?.filter((post) => post.publish === true)
+    .sort((a, b) => new Date(a.publishDate) - new Date(b.publishDate));
+
   return (
     <section className="py-24 h-screen px-[96px] ">
       <div className="container">
         <h1>All Posts</h1>
-        <div className="flex gap-6 mt-6">
-          {posts
-            ?.filter((post) => post.publish === true)
-            .map((post) => (
-              <Link
-                href={`blog/${post.slug}`}
-                key={post?.slug.title}
-                className="p-8 rounded-md shadow-md"
-              >
-                <h3 className="text-xl font-semibold">{post?.title}</h3>
-                <p className="mt-4 text-sm">{post?.author}</p>
-                <time className="text-[12px] text-gray-400">
-                  {post?.publishDate}
-                </time>
-              </Link>
-            ))}
+        <div className="flex flex-wrap  mt-6 ">
+          {sortedPosts.map((post) => (
+            <Link
+              href={`blog/${post.slug}`}
+              key={post?.slug.title}
+              className="p-8 rounded-md shadow-md"
+            >
+              <BlogCard
+                key={post.id}
+                id={post.id}
+                title={post.title}
+                description={post.description}
+                publishDate={post.publishDate}
+              />
+            </Link>
+          ))}
         </div>
       </div>
     </section>

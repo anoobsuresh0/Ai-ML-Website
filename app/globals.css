@@ -79,3 +79,16 @@ p {
 .submit_btn:hover {
   background-color: #01B582;
 }
+.prose h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #01B582 ;
+}
+
+.prose h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #01B582 ;
+}
