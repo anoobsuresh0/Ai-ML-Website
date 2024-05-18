@@ -5,7 +5,7 @@ const Page = async () => {
   const posts = await getAllPostsMeta();
 
   return (
-    <section className="py-24 h-screen ">
+    <section className="py-24 h-screen px-[96px] ">
       <div className="container">
         <h1>All Posts</h1>
         <div className="flex gap-6 mt-6">
