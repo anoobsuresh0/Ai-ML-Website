@@ -17,11 +17,10 @@ const Page = async ({ params }) => {
 
   return (
     <section className="py-10 h-[100%] ">
-      <Link href='/blog'  className="flex  items-center px-[300px]">
-        
-        <IoMdArrowRoundBack style={{fontSize:20,marginRight:10}} />
+      <Link href="/blog" className="flex  items-center px-[300px]">
+        <IoMdArrowRoundBack style={{ fontSize: 20, marginRight: 10 }} />
         <h4>Back</h4>
-      </Link >
+      </Link>
 
       <div className="container px-[300px] justify-center py-4 prose max-w-none ">
         {content}
