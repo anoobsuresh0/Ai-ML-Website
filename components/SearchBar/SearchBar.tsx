@@ -8,7 +8,7 @@ const SearchBar = ({ onChange }: { onChange: (query: string) => void }) => {
   };
 
   return (
-    <div className="flex w-[70%] h-[56px] items-center p-4 bg-white text-black mt-4 rounded-2xl relative">
+    <div className="flex lg:w-[70%] h-[56px] items-center p-4 bg-white text-black mt-4 rounded-2xl relative">
       <MagnifyingGlassIcon className="h-6 w-6 text-gray-500 mx-4" />
       <input
         type="text"

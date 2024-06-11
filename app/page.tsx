@@ -15,9 +15,10 @@ export default function Home() {
     color: "black",
   };
 
+
   return (
     <>
-      <div style={defaultStyle}>
+      <div className=" px-6 sm:px-6 md:px-24 lg:px-24" >
         <HeroSection />
       </div>
       <div style={defaultStyle}>
