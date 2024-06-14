@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="h-[80vh] mt-40">
+    <div className="h-[80vh] mt-40 md:mb-0 lg:mb-0 sm:mb-[30px] ">
       <div className="flex flex-1 justify-center">
         <h1 className="font-sulphurPoint">CONTACT US</h1>
       </div>
