@@ -4,17 +4,6 @@ import HeroSection from "@/containers/home-page/hero-section";
 import ServiceSection from "@/containers/home-page/service-section/";
 
 export default function Home() {
-  const defaultStyle = {
-    padding: "0 96px",
-    backgroundColor: "black",
-    color: "white",
-  };
-  const sectionStyle = {
-    padding: "0 96px",
-    backgroundColor: "white",
-    color: "black",
-  };
-
   return (
     <>
       <div className=" lg:px-24 sm:px-4 ">
@@ -26,9 +15,9 @@ export default function Home() {
       <div className=" lg:px-24 sm:px-4 ">
         <ServiceSection />
       </div>
-      {/* <div style={defaultStyle}>
+      <div className=" lg:px-24 sm:px-4 ">
         <ContactSection />
-      </div> */}
+      </div>
     </>
   );
 }
