@@ -14,7 +14,7 @@ const ServiceSection = () => {
 
   return (
     <div className="flex flex-col justify-center items-start h-auto mb-[80px] ">
-      <h1 className="font-neueMachina sm:mb-[100px] md:mb-[200px] lg:mb-[200px] sm:mt-[50px] sm:text-[50px] md:text-[4rem] lg:text-[4rem]   ">
+      <h1 className="font-neueMachina sm:mb-[80px] md:mb-[200px] lg:mb-[200px] sm:mt-[50px] sm:text-[40px] md:text-[4rem] lg:text-[4rem]   ">
         SERVICES
       </h1>
 
