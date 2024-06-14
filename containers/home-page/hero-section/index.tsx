@@ -22,38 +22,47 @@ const HeroSection = () => {
   }, []);
 
   const filteredPosts = posts.filter((post) =>
-    post.title.toLowerCase().includes(searchQuery)
+    post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
-    <div className="flex h-auto mt-[130px] mb-[200px] items-center">
-      <div className="flex-cols">
-        <div className="flex items-center gap-10">
-          <div className="w-[60%]">
+    <div className="flex flex-col h-auto mt-[130px] mb-[200px] items-center">
+      <div className="flex flex-col lg:flex-row w-full items-center lg:items-start lg:gap-10">
+        <div className="lg:w-[60%] flex flex-col gap-10">
+          <div className="flex flex-col gap-5">
             <h2 className="font-powerGrotesk text-[#666666]">
               Your Journey to Tomorrow Begins Here
             </h2>
-            <h1 className="font-sulphurPoint">
+            <h1 className="font-sulphurPoint text-left">
               Explore the Frontiers of Artificial Intelligence
             </h1>
-            <h4 className="font-neueMachina text-[#666666]">
-              Welcome to the epicenter of AI innovation. FutureTech AI News is
-              your passport to a world where machines think, learn, and reshape
-              the future. Join us on this visionary expedition into the heart of
-              AI.
-            </h4>
-
-            <SearchBar onChange={handleSearchChange} />
           </div>
 
-          <div className="w-[40%]">
-            {/* <ModelViewer/> */}
-            <img src={BrainImage.src} alt="Brain Image" />
-          </div>
+          <h4 className=" sm:hidden lg:block md:block font-neueMachina text-[#666666]">
+            Welcome to the epicenter of AI innovation. FutureTech AI News is
+            your passport to a world where machines think, learn, and reshape
+            the future. Join us on this visionary expedition into the heart of
+            AI.
+          </h4>
+
+          <SearchBar onChange={handleSearchChange} />
         </div>
+        {/* <ModelViewer /> */}
 
-        {searchQuery && <CardGroup blogPosts={filteredPosts} />}
+        <div className="sm:hidden lg:block lg:w-[40%] justify-center">
+          <img
+            src={BrainImage.src}
+            alt="Brain Image"
+            className="w-full lg:w-auto"
+          />
+        </div>
       </div>
+
+      {searchQuery && (
+        <div className="w-full mt-10 lg:mt-10">
+          <CardGroup blogPosts={filteredPosts} />
+        </div>
+      )}
     </div>
   );
 };
