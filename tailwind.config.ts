@@ -8,18 +8,21 @@ const config: Config = {
     "./containers/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "380px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
 
-    colors:{
+    colors: {
       lightGreen: "#01B582",
       darkGreen: "#01523B",
       darkGray: "#101010",
-      lightGray : "#5A5A5A",
+      lightGray: "#5A5A5A",
       white: "#FFFFFF",
-      black : "#000000",
+      black: "#000000",
     },
-
-
-
 
     fontFamily: {
       neueMachina: ["var(--font-neue-machina)"],
@@ -34,8 +37,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

@@ -18,10 +18,10 @@ export default function Home() {
 
   return (
     <>
-      <div className=" px-6 sm:px-6 md:px-24 lg:px-24" >
+      <div className=" lg:px-24 sm:px-4 " >
         <HeroSection />
       </div>
-      <div style={defaultStyle}>
+      {/* <div style={defaultStyle}>
         <BenefitsSection />
       </div>
       <div style={sectionStyle}>
@@ -29,7 +29,7 @@ export default function Home() {
       </div>
       <div style={defaultStyle}>
         <ContactSection />
-      </div>
+      </div> */}
     </>
   );
 }

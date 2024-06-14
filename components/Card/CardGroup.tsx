@@ -14,7 +14,7 @@ interface CardGroupProps {
 
 const CardGroup: React.FC<CardGroupProps> = ({ blogPosts }) => {
   return (
-    <div className="flex gap-10 justify-center ">
+    <div className="flex flex-col items-center lg:flex-row  justify-center w-full">
       {blogPosts
         ?.filter((post) => post.publish === true)
         .map((post) => (

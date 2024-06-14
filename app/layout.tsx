@@ -20,7 +20,7 @@ export default function RootLayout({
         className={`  ${NeueMachina.variable} ${PowerGrotesk.variable} ${SulphurPoint.variable} `}
         style={{}}
       >
-        {/* <NavBar /> */}
+        <NavBar />
         {children}
         {/* <Footer /> */}
       </body>
