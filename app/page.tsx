@@ -15,19 +15,18 @@ export default function Home() {
     color: "black",
   };
 
-
   return (
     <>
-      <div className=" lg:px-24 sm:px-4 " >
+      <div className=" lg:px-24 sm:px-4 ">
         <HeroSection />
       </div>
-     <div className=" lg:px-24 sm:px-4 ">
+      <div className=" lg:px-24 sm:px-4 ">
         <BenefitsSection />
       </div>
-      {/*  <div style={sectionStyle}>
+      <div className=" lg:px-24 sm:px-4 ">
         <ServiceSection />
       </div>
-      <div style={defaultStyle}>
+      {/* <div style={defaultStyle}>
         <ContactSection />
       </div> */}
     </>

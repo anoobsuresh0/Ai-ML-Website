@@ -3,7 +3,7 @@ import RobotPointing from "../../../assets/images/robot_pointing.png";
 
 const BenefitsSection = () => {
   return (
-    <div className="flex flex-col md:flex-row h-screen items-center">
+    <div className="flex flex-col md:flex-row h-auto items-center">
       <div className="w-full md:w-[900px]">
         <h1 className="font-powerGrotesk">
           Explore the Upsides of
