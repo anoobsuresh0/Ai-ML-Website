@@ -14,19 +14,23 @@ const Page = async () => {
   });
 
   return (
-    <section className="py-24 h-auto px-[96px] ">
-      <div className="container">
-        <div className=" flex flex-col justify-center items-center">
-          <h1>Our Fresh News</h1>
-          <h4>Stay informed and inspired with out bite-sized articles</h4>
+    <section className="md:py-24 lg:py-24 sm:py-10  h-auto lg:px-24 sm:px-4 ">
+      <div className="">
+        <div className="flex flex-col justify-center items-center">
+          <h1 className=" sm:text-[60px] text-lightGreen ">
+            Our Fresh <span className="text-white">News</span>
+          </h1>
+          <h4 className=" text-lightGray bg text-center sm:text-left">
+            Stay informed and inspired with our bite-sized articles
+          </h4>
         </div>
 
-        <div className="flex flex-wrap  mt-6 ">
+        <div className="container flex-wrap mt-6 ">
           {postImages.map((post) => (
             <Link
               href={`blog/${post.slug}`}
               key={post?.slug.title}
-              className="p-8 rounded-md shadow-md"
+              className="rounded-md shadow-md "
             >
               <BlogCard
                 key={post.id}
