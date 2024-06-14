@@ -4,7 +4,7 @@ import Logo from "../../assets/images/logo.png";
 
 const NavBar = () => {
   return (
-    <div className="w-screen flex justify-between items-center h-[50px] bg-black text-white lg:px-24 sm:px-4 mt-4 sticky top-0">
+    <div className="w-screen flex justify-between items-center h-[80px]  bg-black text-white lg:px-24 sm:px-4 sticky top-0">
       <div className="space-x-10">
         <Link href="/">
           <img src={Logo.src} className="h-10" alt="logo" />

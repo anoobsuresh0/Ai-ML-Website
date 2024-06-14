@@ -21,10 +21,10 @@ export default function Home() {
       <div className=" lg:px-24 sm:px-4 " >
         <HeroSection />
       </div>
-      {/* <div style={defaultStyle}>
+     <div className=" lg:px-24 sm:px-4 ">
         <BenefitsSection />
       </div>
-      <div style={sectionStyle}>
+      {/*  <div style={sectionStyle}>
         <ServiceSection />
       </div>
       <div style={defaultStyle}>
