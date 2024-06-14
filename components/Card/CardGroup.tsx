@@ -24,7 +24,9 @@ const CardGroup: React.FC<CardGroupProps> = ({ blogPosts }) => {
       {postImages
         ?.filter((post) => post.publish === true)
         .map((post) => (
-          <Link href={`blog/${post.slug}`}>
+          <Link href={`blog/${post.slug}`}
+          key={post?.slug}
+          >
             <Card
               key={post.id}
               id={post.id}
