@@ -2,6 +2,10 @@ import BlogCard from "@/components/Card/BlogCard";
 import { getAllPostsMeta } from "@/lib/mdx";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Blog",
+};
+
 const Page = async () => {
   const posts = await getAllPostsMeta();
 
