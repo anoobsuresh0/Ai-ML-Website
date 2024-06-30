@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import BrainImage from "../../../assets/images/image_brain.png";
+import BrainImage2 from "../../../assets/images/BrainImage2.png";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import CardGroup from "@/components/Card/CardGroup";
 import { ModelViewer } from "@/components/Model/ModelViewer";
@@ -34,7 +35,7 @@ const HeroSection = () => {
               Your Journey to Tomorrow Begins Here
             </h2>
             <h1 className="font-sulphurPoint text-left">
-              Explore the Frontiers of Artificial Intelligence
+              Unlock the Potential of Artificial Intelligence
             </h1>
           </div>
 
@@ -51,7 +52,7 @@ const HeroSection = () => {
 
         <div className="sm:hidden lg:block lg:w-[40%] justify-center">
           <img
-            src={BrainImage.src}
+            src={BrainImage2.src}
             alt="Brain Image"
             className="w-full lg:w-auto"
           />
